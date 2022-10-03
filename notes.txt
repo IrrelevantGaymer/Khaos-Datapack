@@ -1,0 +1,31 @@
+10/02/2022
+
+Cora:
+- added global variable scoreboard to keep track of different numbers
+- added reset trigger
+- added random_50 predicate which returns true 50% of the time
+- added faction loot table which returns
+    white_wool 50%,
+    orange_wool 28.6%,
+    magenta_wool 28.6%,
+    light_blue_wool 14.3%,
+    yellow_wool 28.6%
+- added town_win_condition advancment which triggers khaos:game_state_handling/town_win_condition
+  when ender dragon is killed by a player in the khaos.town team
+- procrastinated implementing actually useful stuff so added generate_death_message_array,
+  get_death_message_array, and loop_death_message into roles/jester
+
+Notes:
+Idea for role distribution-
+  create int array of size num players
+  generate invisible armor stand
+  execute as armor_stand run loot replace entity @s weapon.mainhand loot khaos:faction
+  detect item in mainhand, output 0 if white_wool, 1 if orange_wool, 2 if magenta_wool, 3 if light_blue, and 4 if yellow
+  randomly generate numbers to fill up the array using loot table
+  0 = good, 1 = mafia, 2 = coven, 3 = neutral evil, 4 = neutral
+  select random player and give role based off number in first element of array, remove first element of array, loop
+
+  in future add town, mafia, coven, neutral_evil, and neutral loot tables
+
+  to ensure a fair and playable game we can check how many evil roles are added, if its 0 or exceeds 50% of num players,
+  then we can try generating again before giving the roles to players

@@ -1,0 +1,19 @@
+{
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "player": {
+          "type":"minecraft:player",
+          "team":"khaos.town"
+        },
+        "entity":{
+          "type":"minecraft:pig"
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "khaos:game_state_handling/town_win_condition"
+  }
+}
