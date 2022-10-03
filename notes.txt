@@ -2,6 +2,7 @@
 
 Cora:
 - added global variable scoreboard to keep track of different numbers
+- added global loop scoreboard to keep track of loops
 - added reset trigger
 - added random_50 predicate which returns true 50% of the time
 - added faction loot table which returns
