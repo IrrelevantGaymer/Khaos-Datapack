@@ -23,6 +23,7 @@ scoreboard players set Players khaos.var 0
 scoreboard players set GoodRoles khaos.var 0
 scoreboard players set EvilRoles khaos.var 0
 scoreboard players set NeutralRoles khaos.var 0
+scoreboard players set MafiaRoles khaos.var 0
 # 0: not playing, 1: playing
 scoreboard players set GameState khaos.var 0
 
