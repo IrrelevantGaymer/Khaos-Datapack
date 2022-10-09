@@ -9,8 +9,8 @@ execute as @a[scores={khaos.reset = 1..}] run function khaos:game_state_handling
 
 # death handling
 execute if score GameState khaos.var matches 1 as @a[scores={khaos.death = 1..}, tag=!khaos.death] run tag @s add khaos.death
-execute if score GameState khaos.var matches 1 as @a[team=khaos.town, tag=khaos.death, gamemode=survival] run gamemode spectator @s
-execute if score GameState khaos.var matches 1 as @a[team=khaos.mafia, tag=khaos.death, gamemode=survival] run gamemode spectator @s
+execute if score GameState khaos.var matches 1 as @a[team=khaos.town, tag=khaos.death, gamemode=survival] run khaos:game_state_handling/death/town_death
+execute if score GameState khaos.var matches 1 as @a[team=khaos.mafia, tag=khaos.death, gamemode=survival] run khaos:game_state_handling/death/mafia_death
 execute if score GameState khaos.var matches 1 as @a[tag=khaos.avoid_processed, tag=khaos.death, tag=khaos.jester, tag=!khaos.haunted] run function khaos:roles/jester/init_haunt
 
 # endregion GameState : Playing

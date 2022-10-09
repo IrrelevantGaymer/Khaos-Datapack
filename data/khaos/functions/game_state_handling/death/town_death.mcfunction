@@ -1,5 +1,7 @@
 tellraw @a [{"selector":"@s"},{"text":" died"}]
 
+gamemode spectator @s
+
 scoreboard players remove GoodRoles khaos.var 1
 
 execute if score GoodRoles khaos.var matches 0 if score EvilRoles khaos.var 0 run khaos:game_state_handling/win_condition/drawn_condition
