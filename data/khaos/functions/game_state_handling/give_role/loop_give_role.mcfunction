@@ -6,3 +6,5 @@ execute if data entity @e[type=armor_stand, limit=1] {HandItems:[{id:"minecraft:
 execute if data entity @e[type=armor_stand, limit=1] {HandItems:[{id:"minecraft:orange_wool"}]} as @a[tag=!khaos.role, limit=1, sort=random] run function khaos:roles/mafia/mafioso/init
 
 execute as @e[type=minecraft:armor_stand, tag=khaos.faction_stand] at @s run tp ~ -255 ~
+
+scoreboard players remove gr_count khaos.var 1
