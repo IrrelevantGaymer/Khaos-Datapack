@@ -20,7 +20,8 @@ execute if score GameState khaos.var matches 1 as @a[tag=khaos.avoid_processed, 
 # region loops
 
 # give_role loop handling
-
+execute if score gr_init khaos.loop matches 1 if score gr_count khaos.loop matches 1.. run function khaos:game_state_handling/give_role/loop_give_role
+execute if score gr_init khaos.loop matches 1 if score gr_count khaos.loop matches 0 run function khaos:game_state_handling/give_role/finish_give_role
 
 # jester death message loop handling
 execute if score dm_init khaos.loop matches 1 if score dm_count khaos.loop matches 1.. run function khaos:roles/jester/loop_death_message
