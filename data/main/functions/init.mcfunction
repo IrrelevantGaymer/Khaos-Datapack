@@ -18,6 +18,9 @@ team add khaos.town
 team modify khaos.town displayName {"text":"Town", "color":"green"}
 team add khaos.mafia
 team modify khaos.mafia displayName {"text":"Mafia", "color":"dark_red"}
+# coven light_purple
+# neutral gold
+# neutral_evil gray
 
 # keeps track of players, roles, and game state
 scoreboard objectives add khaos.var dummy

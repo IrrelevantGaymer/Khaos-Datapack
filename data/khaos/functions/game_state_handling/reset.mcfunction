@@ -2,6 +2,7 @@
 
 scoreboard players set @a khaos.reset 0
 scoreboard players enable @a khaos.start_game
+scoreboard players enable @a khaos.give_role
 scoreboard players set GameState khaos.var 0
 
 scoreboard players set bool_roles khaos.var 0

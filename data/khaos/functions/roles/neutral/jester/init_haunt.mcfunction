@@ -1,3 +1,5 @@
+# called by main:tick ??? khaos:roles/neutral/jester/check_death
+
 tag @s add khaos.avoid_processed
 
 #in the event of implementing multiple jesters, will have to come up with a new system of player tracking to avoid conflicts

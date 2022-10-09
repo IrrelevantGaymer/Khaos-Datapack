@@ -1,3 +1,5 @@
+# called by khaos:roles/neutral/jester/assign
+
 data modify storage dm_array Temp set from storage dm_array Values
 data modify storage dm_array Message set value ""
 

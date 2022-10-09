@@ -10,7 +10,7 @@
 tag @r[tag=!avoid_processed, tag=!processed, tag=!death] add in_process
 
 # create some way to have khaos:roles/jester/haunt kill the player in question
-tellraw @s {"selector":"@p[tag=in_process]","color":"red","clickEvent":{"action":"run_command","value":"function khaos:roles/jester/haunt"},"hoverEvent":{"action":"show_text","contents":["Ensue Chaos"]}}
+tellraw @s {"selector":"@p[tag=in_process]","color":"red","clickEvent":{"action":"run_command","value":"trigger "},"hoverEvent":{"action":"show_text","contents":["Ensue Chaos"]}}
 
 tag @p[tag=in_process] add processed
 tag @p[tag=in_process] remove in_process

@@ -1,14 +1,22 @@
 Ideas in the future:
+  - Add /trigger khaos.settings
   - Different gamemodes with different role distributions
   - Maybe a Stalemate timer to promote early killing
   - Nomad gamemode? Having a moving worldborder that always has a stronghold inside it
     to keep players on the move
   - Gamemodes where the goal isn't to kill the dragon, maybe kill the wither,
     or get all advancements, or only eliminate the evil roles???
-  - new function in jester which sends a message checking if the jester died in the way
+  - New function in jester which sends a message checking if the jester died in the way
     they were supposed to before letting them haunt someone, because checking how someone died
     is really hard
-  - add an advancement when the player takes damage, an x, y, and z scoreboards
+  - Add an advancement when the player takes damage, an x, y, and z scoreboards
     will be updated with that players last coords, meaning when they die and become
     a spectator, we can teleport them to where they died
     (could also be useful for vampire conversion)
+  - Summon fireworks at winning players after a win condition???
+  - For Roles with random win conditions (Jester, Executioner, etc.),
+    have different assign functions: assign_random for assign_roles function,
+    and assign so that a Judge can use execute as Player run function khaos:roles/.../assign
+    so they can make a custom game with specific roles and win conditions
+  - Having issues coming up with a way to use the tellraw commands, could replace it with
+    filling
