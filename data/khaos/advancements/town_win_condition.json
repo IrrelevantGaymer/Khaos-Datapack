@@ -14,6 +14,6 @@
     }
   },
   "rewards": {
-    "function": "khaos:game_state_handling/town_win_condition"
+    "function": "khaos:game_state_handling/win_condition/town_win_condition"
   }
 }

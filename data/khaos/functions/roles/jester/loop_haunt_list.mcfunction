@@ -12,3 +12,5 @@ tellraw @s {"selector":"@p[tag=in_process]","color":"red","clickEvent":{"action"
 
 tag @p[tag=in_process] add processed
 tag @p[tag=in_process] remove in_process
+
+scoreboard players remove hl_count khaos.var 1
