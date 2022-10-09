@@ -1,3 +1,5 @@
+# called by main:tick
+
 # we could write out all player names using the player_head loot table and nbt data
 # in one message, there is an issue though with converting a string to a list of characters
 # as well as not being able to add a ClickEvent to specific names, unless we separate

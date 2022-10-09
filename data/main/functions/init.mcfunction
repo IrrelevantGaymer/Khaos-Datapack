@@ -14,8 +14,10 @@ gamerule commandBlockOutput false
 # gamerule sendCommandFeedback false
 
 # teams
-team add khaos.town "Town"
-team add khaos.mafia "Mafia"
+team add khaos.town
+team modify khaos.town displayName {"text":"Town", "color":"green"}
+team add khaos.mafia
+team modify khaos.mafia displayName {"text":"Mafia", "color":"dark_red"}
 
 # keeps track of players, roles, and game state
 scoreboard objectives add khaos.var dummy
@@ -28,6 +30,10 @@ scoreboard players set MafiaRoles khaos.var 0
 scoreboard players set GameState khaos.var 0
 
 scoreboard players set bool_roles khaos.var 0
+
+# constants
+scoreboard objectives add khaos.const dummy
+scoreboard players set 10 khaos.const 10
 
 #resets tags and scoreboards
 scoreboard players set @a khaos.death 0

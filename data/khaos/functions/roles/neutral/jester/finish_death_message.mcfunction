@@ -1,3 +1,5 @@
+# called by main:tick
+
 scoreboard players set dm_init khaos.loop 0
 
 #output death message with

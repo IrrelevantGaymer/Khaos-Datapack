@@ -1,8 +1,7 @@
 # called by khaos:game_state_handling/give_role/loop_give_role
 
-tag @s add khaos.role
-tag @s add khaos.town
-tag @s add khaos.vanilla
+tag @s add khaos.role_init
+scoreboard players set @s khaos.roles_id 0100
 
 team join khaos.town @s
 

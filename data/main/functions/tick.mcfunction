@@ -9,8 +9,8 @@ execute as @a[scores={khaos.reset = 1..}] run function khaos:game_state_handling
 
 # death handling
 execute if score GameState khaos.var matches 1 as @a[scores={khaos.death = 1..}, tag=!khaos.death] run tag @s add khaos.death
-execute if score GameState khaos.var matches 1 as @a[team=khaos.town, tag=khaos.death, gamemode=survival] run khaos:game_state_handling/death/town_death
-execute if score GameState khaos.var matches 1 as @a[team=khaos.mafia, tag=khaos.death, gamemode=survival] run khaos:game_state_handling/death/mafia_death
+execute if score GameState khaos.var matches 1 as @a[team=khaos.town, tag=khaos.death, gamemode=survival] run function khaos:game_state_handling/death/town_death
+execute if score GameState khaos.var matches 1 as @a[team=khaos.mafia, tag=khaos.death, gamemode=survival] run function khaos:game_state_handling/death/mafia_death
 execute if score GameState khaos.var matches 1 as @a[tag=khaos.avoid_processed, tag=khaos.death, tag=khaos.jester, tag=!khaos.haunted] run function khaos:roles/jester/init_haunt
 
 # endregion GameState : Playing
@@ -24,11 +24,11 @@ execute if score gr_init khaos.loop matches 1 if score gr_count khaos.loop match
 execute if score gr_init khaos.loop matches 1 if score gr_count khaos.loop matches 0 run function khaos:game_state_handling/give_role/finish_give_role
 
 # jester death message loop handling
-execute if score dm_init khaos.loop matches 1 if score dm_count khaos.loop matches 1.. run function khaos:roles/jester/loop_death_message
-execute if score dm_init khaos.loop matches 1 if score dm_count khaos.loop matches 0 run function khaos:roles/jester/finish_death_message
+execute if score dm_init khaos.loop matches 1 if score dm_count khaos.loop matches 1.. run function khaos:roles/neutral/jester/loop_death_message
+execute if score dm_init khaos.loop matches 1 if score dm_count khaos.loop matches 0 run function khaos:roles/neutral/jester/finish_death_message
 
 # jester haunt list loop handling
-execute if score hl_init khaos.loop matches 1 if score hl_count khaos.loop matches 1.. run function khaos:roles/jester/loop_haunt_list
-execute if score hl_init khaos.loop matches 1 if score hl_count khaos.loop matches 0 run function khaos:roles/jester/finish_haunt_list
+execute if score hl_init khaos.loop matches 1 if score hl_count khaos.loop matches 1.. run function khaos:roles/neutral/jester/loop_haunt_list
+execute if score hl_init khaos.loop matches 1 if score hl_count khaos.loop matches 0 run function khaos:roles/neutral/jester/finish_haunt_list
 
 # endregion loops
