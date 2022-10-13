@@ -34,9 +34,13 @@ scoreboard players set GameState khaos.var 0
 
 scoreboard players set bool_roles khaos.var 0
 
+#ticking timers
+scoreboard players set HealerGiveCrystal khaos.var 0
+
 # constants
 scoreboard objectives add khaos.const dummy
 scoreboard players set 10 khaos.const 10
+scoreboard players set 24000 khaos.const 24000
 
 #resets tags and scoreboards
 scoreboard players set @a khaos.death 0

@@ -31,4 +31,8 @@ execute if score dm_init khaos.loop matches 1 if score dm_count khaos.loop match
 execute if score hl_init khaos.loop matches 1 if score hl_count khaos.loop matches 1.. run function khaos:roles/neutral/jester/loop_haunt_list
 execute if score hl_init khaos.loop matches 1 if score hl_count khaos.loop matches 0 run function khaos:roles/neutral/jester/finish_haunt_list
 
+#tick for timer to give healer their healing crystals
+scoreboard players add HealerGiveCrystal khaos.var 1
+execute if score HealerGiveCrystal khaos.var % 24000 khaos.const as @a[tag=khaos.healer] run function khaos:roles/town/healer/tick_give_healing_item
+
 # endregion loops

@@ -2,6 +2,6 @@
 
 tag @s add khaos.role_assign
 tag @s add khaos.town
-tag @s add khaos.vanilla
+tag @s add khaos.healer
 
 #title command stuff
