@@ -1,0 +1,10 @@
+Town = 01
+  Vanilla   = 00
+  Healer    = 01
+
+Mafia = 02
+  mafioso   = 00
+
+Neutral = 10
+  survivor  = 00
+  jester    = 01
